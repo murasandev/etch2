@@ -10,13 +10,14 @@ const gridContainer = document.querySelector(".grid-container")
 function createGrid(xAxis = 16, yAxis = 16){
     //set dimensions of grid based on x and y axis
     for(i = 0; i < xAxis; i++){
-        
+        createBox();
     }
 }
 
 function createBox(){
     const box = document.createElement('div');
+    box.classList.toggle('initialStyle');
     gridContainer.appendChild(box);
 }
 
-createBox();
+createGrid();
