@@ -9,7 +9,7 @@ const gridContainer = document.querySelector(".grid-container")
 
 function createGrid(xAxis = 16, yAxis = 16){
     //set dimensions of grid based on x and y axis
-    for(i = 0; i < xAxis; i++){
+    for(i = 0; i < xAxis * yAxis; i++){
         createBox();
     }
 }
