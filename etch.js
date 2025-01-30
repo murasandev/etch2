@@ -28,7 +28,7 @@ createGrid();
 const boxes = document.querySelectorAll('.initialStyle');
 boxes.forEach((boxDiv) => {
     boxDiv.addEventListener('mouseover', function(e){
-        e.target.classList.toggle('testColor');
+        e.target.style.background = 'black';
     });     
 });
 
