@@ -1,6 +1,7 @@
 const gridContainer = document.querySelector(".grid-container")
+let axisSize = 16;
 
-function createGrid(axisSize = 16){
+function createGrid(axisSize){
     for(i = 0; i < axisSize; i++){
         const gridRow = document.createElement('div');
         gridRow.classList.toggle('grid-row');
@@ -16,7 +17,14 @@ function createGrid(axisSize = 16){
     }
 }
 
-createGrid();
+function deleteGrid(){
+    const allGridRows = document.querySelectorAll('.grid-row');
+    allGridRows.forEach((row) => {
+        row.remove();
+    });
+}
+
+createGrid(axisSize);
 addHoverEffect();
 
 function addHoverEffect(){
@@ -33,8 +41,9 @@ function addHoverEffect(){
 const btnGrid = document.querySelector('.btn-grid');
 btnGrid.addEventListener('click', function(){
     do{
-        xAxis = prompt("Enter a number between 16 and 100");
-        createGrid(xAxis);
+        axisSize = prompt("Enter a number between 16 and 100");
+        deleteGrid();
+        createGrid(axisSize);
         addHoverEffect();
-    }while(xAxis <  16 || xAxis > 100);
+    }while(axisSize <  16 || axisSize > 100);
 });
