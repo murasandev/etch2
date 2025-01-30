@@ -26,3 +26,10 @@ boxes.forEach((boxDiv) => {
     });     
 });
 
+const btnGrid = document.querySelector('.btn-grid');
+btnGrid.addEventListener('click', function(){
+    do{
+        xAxis = prompt("Enter a number between 16 and 100");
+    }while(xAxis <  16 || xAxis > 100);
+    console.log(xAxis);
+});
