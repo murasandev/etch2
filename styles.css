@@ -17,10 +17,6 @@ html, body {
     display: flex;
 }
 
-/* .grid-container > div{
-    set width and height in js
-} */
-
 .initialStyle {
     background-color: pink;
     flex: 1;
